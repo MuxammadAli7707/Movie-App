@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700.fmodaldisplay=swap');
+
 *,
 *::after,
 *::before {
@@ -11,5 +13,283 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+.header__intro {
+  position: relative;
+  padding-top: 15px;
+  z-index: 100;
+}
+.header {
+  position: relative;
+  height: 100vh;
+}
+.header__inputbox {
+  width: 525px;
+  height: 36px;
+  padding: 6px 10px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background-color: transparent;
+}
+.header__input {
+  width: 525px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: transparent;
+  color: #fff;
+}
+::placeholder {
+  color: #fff;
+}
+.header__input:focus {
+  outline: none;
+}
+
+.bx-search {
+  color: #fff;
+}
+.header__sign {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 27px;
+  color: #fff;
+}
+.header__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #be123c;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bx-menu {
+  color: #fff;
+}
+.carousel {
+  position: absolute;
+  top: 0;
+}
+.carusel__img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.hero__box {
+  width: 404px;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.hero__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.hero__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.hero__range {
+  margin-right: 34px;
+}
+.hero__info {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+}
+
+.hero__link {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 18px;
+  background-color: #be123c;
+  border-radius: 6px;
+}
+.hero__link:hover {
+  color: #fff;
+}
+
+.movie {
+  margin: 82px 0;
+}
+
+.movie__desc {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+  color: #000;
+}
+.movie__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #be123c;
+}
+.movie__link:hover {
+  color: #be123c;
+}
+
+.movie__info {
+  padding: 0 40px;
+  margin-bottom: 44px;
+}
+
+.movie__item {
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+.item__imgbox {
+  position: relative;
+  margin-bottom: 12px;
+}
+.movie__btns {
+  position: absolute;
+  width: 100%;
+  top: 12px;
+  padding: 0 12px;
+}
+.movie__tv {
+  background: rgba(243, 244, 246, 0.5);
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #111827;
+}
+.movie__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #be123c;
+}
+
+.bxs-heart {
+  color: #fff;
+}
+.item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.item__years {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  color: #9ca3af;
+}
+.item__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+.item__box {
+  margin-bottom: 12px;
+}
+.movie__imdb {
+  margin-right: 10px;
+}
+.item__range {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #111827;
+}
+.bxs-star {
+  margin-right: 10px;
+}
+.item__percent {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #111827;
+}
+.item__category {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9ca3af;
+}
+.video__list {
+  overflow-x: hidden;
+}
+
+.video__item {
+  padding: 0 20px;
+}
+
+.video__link {
+  width: 100%;
+  height: 253px;
+}
+.video__text {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #111827;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 48px;
+}
+
+
+.social__ikon {
+  color: #111827;
+  font-size: 25px;
+}
+
+
+.footer__item:not(:last-child) {
+  margin-right: 48px;
+}
+.footer__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #111827;
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #6b7280;
+}
+.footer__social {
+  margin-bottom: 36px;
+}
+.footer__list {
+  margin-bottom: 36px;
+}
+
+.footer {
+  margin-bottom: 50px;
 }
 
