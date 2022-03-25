@@ -1,6 +1,7 @@
 const elActionAll = document.querySelector("#action-all");
 let actionAll = [];
 
+
 movies.forEach((item, index) => {
   let elActAll = "Action";
   if (item.categories == elActAll) {

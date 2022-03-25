@@ -167,6 +167,8 @@ movies.forEach((item, index) => {
     newMovie.push(item);
   }
 });
+
+let idx = 0;
 newMovie.forEach((item, index) => {
   if(index < 4){ 
     let li = document.createElement("li");
@@ -182,12 +184,12 @@ newMovie.forEach((item, index) => {
     </div>
     <div class="d-flex align-items-center justify-content-between mb-3">
       <span class="item__years">USA, ${item.year}</span>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal${idx}">
         More
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal${idx}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -220,6 +222,7 @@ newMovie.forEach((item, index) => {
     </div>
   </div>
 `;
+    idx++;
     elTop.appendChild(li);
   }  
 });
@@ -246,12 +249,12 @@ action.forEach((item, index) => {
     </div>
     <div class="d-flex align-items-center justify-content-between mb-3">
       <span class="item__years">USA, ${item.year}</span>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal${idx}">
         More
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal${idx}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -284,6 +287,7 @@ action.forEach((item, index) => {
     </div>
   </div>
 `;
+    idx++;
     elAction.appendChild(li);
   }  
 });
@@ -303,12 +307,12 @@ movies.forEach((item, index) => {
     </div>
     <div class="d-flex align-items-center justify-content-between mb-3">
       <span class="item__years">USA, ${item.year}</span>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal${idx}">
         More
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal${idx}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -341,6 +345,7 @@ movies.forEach((item, index) => {
     </div>
   </div>
 `;
+    idx++;
     elCategories.appendChild(li);
   }
 });
