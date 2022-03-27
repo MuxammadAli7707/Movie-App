@@ -1,12 +1,6 @@
 const elAll = document.querySelector("#all-category");
 let categoryAll = [];
 
-// movies.forEach((item, index) => {
-//   let elCateAll = "categories";
-//   if (item.categories == elCateAll) {
-//     categoryAll.push(item);
-//   }
-// });
 movies.forEach((item, index) => {
   let li = document.createElement("li");
     li.className = 'movie__main col-3';
@@ -16,7 +10,7 @@ movies.forEach((item, index) => {
           <img class="item__img" src="${item.youtubePoster}" alt="movie__img">
           <div class="movie__btns d-flex align-items-center justify-content-between">
             <p class="movie__tv text-uppercase mb-0">tv series</p>
-            <button class="movie__btn"><i class='bx bxs-heart' ></i></button>
+            <button class="movie__btn" onclick="func('${item.imdbId}')"><i class='bx bxs-heart' ></i></button>
           </div>
         </div>
         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -61,3 +55,24 @@ movies.forEach((item, index) => {
   `;
     elAll.appendChild(li);
 });
+
+
+// const elSearch = document.querySelector("#movie-search");
+
+// elSearch.addEventListener("keyup", filterItems);
+
+// function filterItems(e) {
+//   let text = e.target.value.toLowerCase();
+//   let items = elAll.getElementsByTagName('li');
+//   console.log(items);
+
+//   for (let i = 0; i < Array.from(items).length; i++) {
+//     let itemName = items[i].textContent;
+//     console.log(itemName);
+//     if (itemName.toLowerCase().indexOf(text) != -1) {
+//       items[i].className = "movie__main col-3"
+//     } else {
+//       items[i].className = "d-none";
+//     }
+//   }
+// }

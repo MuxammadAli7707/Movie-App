@@ -16,7 +16,7 @@ news.forEach((item, index) => {
           <img class="item__img" src="${item.youtubePoster}" alt="movie__img">
           <div class="movie__btns d-flex align-items-center justify-content-between">
             <p class="movie__tv text-uppercase mb-0">tv series</p>
-            <button class="movie__btn"><i class='bx bxs-heart' ></i></button>
+            <button class="movie__btn" onclick="func('${item.imdbId}')"><i class='bx bxs-heart' ></i></button>
           </div>
         </div>
         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -33,11 +33,11 @@ news.forEach((item, index) => {
                   <h5 class="modal-title" id="exampleModalLabel">About Movie</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                  ${item.summary}
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                <div class="modal-body d-flex col-12">
+                  <div class="col-6 p-3">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${item.youtubeId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="col-6 p-3">${item.summary}</div>
                 </div>
               </div>
             </div>
@@ -61,3 +61,4 @@ news.forEach((item, index) => {
   `;
     elNew.appendChild(li);
 });
+

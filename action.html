@@ -27,10 +27,21 @@
             <i class='bx bx-search'></i>
           </div>
           <div class="d-flex align-items-center">
-            <h3 class="header__sign">Sign in</h3>
-            <button class="header__btn">
-              <img src="imgs/menu-btn.svg" alt="menu-btn">
-            </button>
+            <h3 class="header__sign mb-0">Saved</h3>
+
+            <button class="header__btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-heart' ></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel" class="header__desc">Your Favorite Movies</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul id="canva-list" class="p-0 m-0 list-unstyled">
+                  
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -39,7 +50,7 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="imgs/poster.png" class="d-block carusel__img" alt="poster">
+          <img src="imgs/poster-new.png" class="d-block carusel__img" alt="poster">
           <div class="hero__box">
             <h2 class="hero__title">John Wick 3 : Parabellum</h2>
             <div class="item__box d-flex align-items-center">
@@ -53,16 +64,16 @@
               </div>
             </div>
             <p class="hero__text">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
-            <a class="hero__link text-uppercase text-decoration-none" href="#">
+            <a class="hero__link text-uppercase text-decoration-none" href="https://youtu.be/x2db3fR1fBs">
               <img src="imgs/play.png" alt="play">
               Watch trailer
             </a>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="imgs/imdb.png" class="d-block carusel__img" alt="img">
+          <img src="https://www.fao.org/typo3temp/pics/85d01a8737.jpg" class="d-block carusel__img" alt="img">
           <div class="hero__box">
-            <h2 class="hero__title">John Wick 3 : Parabellum</h2>
+            <h2 class="hero__title">Peter Rabbit</h2>
             <div class="item__box d-flex align-items-center">
               <div class="hero__range d-flex align-items-center">
                 <img class="movie__imdb" src="imgs/imdb.png" alt="imdb">
@@ -70,20 +81,20 @@
               </div>
               <div class="d-flex align-items-center">
                 <i class='bx bxs-star' style='color:#d8e818'></i>
-                <span class="hero__info">7.6</span>
+                <span class="hero__info">6.8</span>
               </div>
             </div>
-            <p class="hero__text">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
-            <a class="hero__link text-uppercase text-decoration-none" href="#">
+            <p class="hero__text">One of Beatrix Potter's illustrations of Peter Rabbit and his cousin, Benjamin Bunny. The rabbits were named after Potter's childhood pets Peter Piper and Benjamin Bouncer.</p>
+            <a class="hero__link text-uppercase text-decoration-none" href="https://youtu.be/7Pa_Weidt08">
               <img src="imgs/play.png" alt="play">
               Watch trailer
             </a>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="imgs/poster.png " class="d-block carusel__img" alt="poster">
+          <img src="https://images.theconversation.com/files/448820/original/file-20220228-20-1xn1tw4.jpeg?ixlib=rb-1.1.0&rect=17%2C0%2C2000%2C1329&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" class="d-block carusel__img" alt="poster">
           <div class="hero__box">
-            <h2 class="hero__title">John Wick 3 : Parabellum</h2>
+            <h2 class="hero__title">The GodFather</h2>
             <div class="item__box d-flex align-items-center">
               <div class="hero__range d-flex align-items-center">
                 <img class="movie__imdb" src="imgs/imdb.png" alt="imdb">
@@ -91,11 +102,11 @@
               </div>
               <div class="d-flex align-items-center">
                 <i class='bx bxs-star' style='color:#d8e818'></i>
-                <span class="hero__info">7.6</span>
+                <span class="hero__info">9.9</span>
               </div>
             </div>
-            <p class="hero__text">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
-            <a class="hero__link text-uppercase text-decoration-none" href="#">
+            <p class="hero__text">It made Italians seem like more fully realised people and not stereotypes… it helped Italianise American culture.” The Godfather also changed the star system of the 1970s. As Don Vito Corleone, Marlon Brando won the Best Actor Oscar (which he refused), and was returned to leading man status.</p>
+            <a class="hero__link text-uppercase text-decoration-none" href="https://youtu.be/sY1S34973zA">
               <img src="imgs/play.png" alt="play">
               Watch trailer
             </a>
@@ -113,31 +124,6 @@
     </div>
 
   </section>
-
-
-  <main>
-    <section id="video" class="movie">
-      <div class="container">
-        <div class="movie__info d-flex align-items-center justify-content-between">
-          <!-- <h3 class="movie__desc">Exclusive Videos</h3> -->
-          <h3 class="movie__desc">Action</h3>
-        </div>
-        <ul id="action-all" class="movie__list list-unstyled d-flex flex-wrap">
-          <!-- <li class="video__item col-5">    
-            <iframe class="video__link" src="https://www.youtube.com/embed/hnEwJKVWjFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="video__text">The Suicide Squad : John Cena Interview</p>
-          </li>
-          <li class="video__item col-5">    
-            <iframe class="video__link" src="https://www.youtube.com/embed/l-umG06tKGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="video__text">The Suicide Squad : John Cena Interview</p>
-          </li>
-          <li class="video__item col-5">    
-            <iframe class="video__link" src="https://www.youtube.com/embed/hnEwJKVWjFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="video__text">The Suicide Squad : John Cena Interview</p>
-          </li> -->
-        </ul>
-      </div>
-    </section>
 
   </main>
 

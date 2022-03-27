@@ -27,10 +27,21 @@
             <i class='bx bx-search'></i>
           </div>
           <div class="d-flex align-items-center">
-            <h3 class="header__sign">Sign in</h3>
-            <button class="header__btn">
-              <img src="imgs/menu-btn.svg" alt="menu-btn">
-            </button>
+            <h3 class="header__sign mb-0">Saved</h3>
+
+            <button class="header__btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-heart' ></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel" class="header__desc">Your Favorite Movies</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul id="canva-list" class="p-0 m-0 list-unstyled">
+                  
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -39,7 +50,7 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="imgs/poster.png" class="d-block carusel__img" alt="poster">
+          <img src="imgs/poster-new.png" class="d-block carusel__img" alt="poster">
           <div class="hero__box">
             <h2 class="hero__title">John Wick 3 : Parabellum</h2>
             <div class="item__box d-flex align-items-center">

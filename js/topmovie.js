@@ -16,7 +16,7 @@ tops.forEach((item, index) => {
           <img class="item__img" src="${item.youtubePoster}" alt="movie__img">
           <div class="movie__btns d-flex align-items-center justify-content-between">
             <p class="movie__tv text-uppercase mb-0">tv series</p>
-            <button class="movie__btn"><i class='bx bxs-heart' ></i></button>
+            <button class="movie__btn" onclick="func('${item.imdbId}')"><i class='bx bxs-heart' ></i></button>
           </div>
         </div>
         <div class="d-flex align-items-center justify-content-between mb-3">
