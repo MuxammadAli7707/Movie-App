@@ -348,11 +348,11 @@ body {
   text-indent: 0px !important;
   color: #fff;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
-.carusel-btn::before {
+.carusel-btn.active::before {
   content: '';
   display: inline-block;
   position: absolute;
