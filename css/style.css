@@ -513,6 +513,6 @@ body {
   transform: rotate(180deg);
 }
 #main-list {
-  overflow-x: hidden;
   transform: translateX(0);
+  overflow: hidden;
 }

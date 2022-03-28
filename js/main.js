@@ -351,7 +351,7 @@ Form.addEventListener("submit", (e) =>{
   e.preventDefault();
   let elValue = elSearch.value.toLowerCase();
   movies.forEach(item =>{
-    if(elValue == item.title.toLowerCase()){
+    if(item.title.toLowerCase().indexOf(elValue) != -1){
       let li = document.createElement("li");
       li.className = 'movie__main col-3';
       li.innerHTML = `
