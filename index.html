@@ -195,9 +195,10 @@
         <div class="container">
           <h3 class="movie__desc mb-4">Filter Movies</h3>
           <form id="filter-form" class="filter__form">
-            <input class="filter__text" type="text" name="text" id="filter-text" placeholder="Movie's name" required>
-            <input class="filter__text" type="text" name="text" id="filter-option" placeholder="Movies categories" required list="date">
+            <input class="filter__text" type="text" name="text" id="filter-text" placeholder="Movie's name">
+            <input class="filter__text" type="text" name="text" id="filter-option" placeholder="Movies categories"list="date">
             <datalist id="date" class="datalist">
+              <!-- <option>All</option>
               <option>Action</option>
               <option>Biography</option>
               <option>Documentary</option>
@@ -209,16 +210,21 @@
               <option>Romance</option>
               <option>Comedy</option>
               <option>Adventure</option>
-              <option>News</option>
+              <option>News</option> -->
             </datalist>
-            <input class="filter__text" type="number" name="number" id="filter-start" placeholder="Start of the year" required>
+            <input class="filter__text" type="number" name="number" id="filter-start" placeholder="Start of the year">
             <input class="filter__text" type="number" name="number" id="filter-end" placeholder="End of the year">
-            <button class="btn btn-secondary">Search</button>
+            <button id="filter-btn" class="btn btn-secondary">Search</button>
           </form>
+
+          <ul id="filter-list" class="movie__list list-unstyled d-flex col-12">
+
+          </ul>
         </div>
       </section>
-      <section id="movie" class="movie">
-        <div class="container">
+
+      <div class="container">
+        <section id="movie" class="movie">
           <div class="button-slider">
             <button id="left" class="btn-slider-left"><i class='bx bx-chevron-left' ></i></button>
             <button id="right " class="btn-slider-right"><i class='bx bx-chevron-right' ></i></i></button>
@@ -231,8 +237,8 @@
           <ul id="main-list" class="movie__list list-unstyled d-flex col-12">
             
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section id="arrival" class="movie">
         <div class="container">
