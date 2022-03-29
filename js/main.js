@@ -428,11 +428,13 @@ let count = 0;
 
 rightBtn.addEventListener('click', function change(){
   count++;
+  resetInter();
   changeList();
 });
 
 leftBtn.addEventListener('click', function change() {
   count--;
+  resetInter();
   changeList();
 });
 
@@ -442,8 +444,18 @@ function changeList() {
   }else if(count < 0) {
     count = elItems.length - 1;
   }
-  elList.style.transform = `translateX(${-count * 25}%)`;
+  elList.style.transform = `translateX(${-count * 50}%)`;
   elList.style.transition = 'transform 0.7s ease';
+}
+let interval = setInterval(run, 3000);
+
+function run() {
+  count++;
+  changeList();
+}
+function resetInter() {
+  clearInterval(interval);
+  interval = setInterval(run, 3000);
 }
 
 
