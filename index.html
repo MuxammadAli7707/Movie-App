@@ -194,41 +194,32 @@
       <section id="filter" class="filter mt-5">
         <div class="container">
           <h3 class="movie__desc mb-4">Filter Movies</h3>
-          <form id="filter-form" class="filter__form">
-            <input class="filter__text" type="text" name="text" id="filter-text" placeholder="Movie's name">
-            <input class="filter__text" type="text" name="text" id="filter-option" placeholder="Movies categories"list="date">
-            <datalist id="date" class="datalist">
-              <!-- <option>All</option>
-              <option>Action</option>
-              <option>Biography</option>
-              <option>Documentary</option>
-              <option>Drama</option>
-              <option>Family</option>
-              <option>History</option>
-              <option>Thriller</option>
-              <option>Music</option>
-              <option>Romance</option>
-              <option>Comedy</option>
-              <option>Adventure</option>
-              <option>News</option> -->
-            </datalist>
-            <input class="filter__text" type="number" name="number" id="filter-start" placeholder="Start of the year">
-            <input class="filter__text" type="number" name="number" id="filter-end" placeholder="End of the year">
+          <form id="filter-form" class="filter__form mb-5">
+            <input class="filter__text" type="search" name="text" id="filter-text" placeholder="Movie's name" required>
+            <select class="filter__text" name="select" id="date">
+              <option value="all">All</option>
+            </select>
+            <input class="filter__text" type="number" name="number" id="filter-start" placeholder="Start of the year" required>
+            <input class="filter__text" type="number" name="number" id="filter-end" placeholder="End of the year" required>
             <button id="filter-btn" class="btn btn-secondary">Search</button>
           </form>
 
-          <ul id="filter-list" class="movie__list list-unstyled d-flex col-12">
+          <ul id="filter-list" class="movie__list list-unstyled d-flex flex-wrap col-12 p-0 m-0">
 
           </ul>
+
+          <div class="div-item">
+
+          </div>
         </div>
       </section>
 
       <div class="container">
+        <div class="button-slider">
+          <button id="left" class="btn-slider-left"><i class='bx bx-chevron-left' ></i></button>
+          <button id="right "class="btn-slider-right"><i class='bx bx-chevron-right' ></i></button>
+        </div>
         <section id="movie" class="movie">
-          <div class="button-slider">
-            <button id="left" class="btn-slider-left"><i class='bx bx-chevron-left' ></i></button>
-            <button id="right " class="btn-slider-right"><i class='bx bx-chevron-right' ></i></i></button>
-          </div>
           <div class="movie__info d-flex align-items-center justify-content-between">
             <h3 class="movie__desc">New movies</h3>
             <a id="new-movie" class="movie__link text-decoration-none" href="newmovie.html">See more >

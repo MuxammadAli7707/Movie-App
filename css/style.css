@@ -404,6 +404,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding-left: 15px;
+  padding-right: 3px;
   font-size: 16px;
   color: #be123c;
 }
@@ -491,18 +492,18 @@ body {
 }
 
 .btn-slider-left {
-  position: absolute;
-  left: 3%;
-  top: 50%;
+  position: relative;
+  left: -5%;
+  top: 300px;
   color: #be123c;
   border: none;
   background-color: transparent;
   z-index: 100;
 }
 .btn-slider-right {
-  position: absolute;
-  right: 3%;
-  top: 48%;
+  position: relative;
+  right: -97%;
+  top: 300px;
   color: #be123c;
   border: none;
   background-color: transparent;
@@ -512,13 +513,20 @@ body {
 .bx-chevron-right {
   font-size: 50px;
 }
-.buttn-right {
-  transform: rotate(180deg);
-}
+
 #main-list {
   transform: translateX(0);
 }
 
 #movie {
   overflow: hidden;
+}
+
+.pi {
+  font-size: 30px;
+}
+.movie__desk {
+  font-weight: 700;
+  font-size: 38px;
+  color: #000; 
 }

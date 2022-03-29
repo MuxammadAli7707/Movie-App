@@ -17,7 +17,7 @@ movies.forEach((item, index) => {
 let idx = 0;
 
 topMovie.forEach((item, index) => {
-  if (index < 8) {
+  if (index < 12) {
     let li = document.createElement("li");
     li.className = 'movie__main col-3';
     li.innerHTML = `
@@ -344,8 +344,7 @@ function func(aaa){
 const elSearch = document.querySelector("#movie-search");
 const elModalList = document.getElementById("modal-list");
 const Form = document.getElementById('form');
-const elSearchModal = document.getElementById('search-modal');
-const body = document.getElementById('body');
+const elSearchModal = document.getElementById('search-modal');  
 
 Form.addEventListener("submit", (e) =>{
   e.preventDefault();
@@ -422,15 +421,13 @@ function myFunction() {
   elModalList.innerHTML = "";
 }
 
-const leftBtn = document.querySelectorAll('#left');
-const rightBtn = document.querySelectorAll('#right');
+const rightBtn = document.querySelector(".btn-slider-right");
+const leftBtn = document.querySelector('#left');
 const elItems = document.querySelectorAll('#main-list li');
-console.log(elItems);
 let count = 0;
 
-rightBtn.addEventListener('click', function change(){;
+rightBtn.addEventListener('click', function change(){
   count++;
-  console.log(rightBtn);
   changeList();
 });
 
@@ -441,31 +438,78 @@ leftBtn.addEventListener('click', function change() {
 
 function changeList() {
   if(count > elItems.length - 1) {
-    count = 0;
+    count  = 0;
   }else if(count < 0) {
     count = elItems.length - 1;
   }
-  elList.style.transform = `translateX(${-count * 50}%)`;
+  elList.style.transform = `translateX(${-count * 25}%)`;
+  elList.style.transition = 'transform 0.7s ease';
 }
+
 
 const elFilForm = document.getElementById('filter-form');
 const elText = document.getElementById('filter-text');
-const elOption = document.getElementById('filter-option');
-const elStar = document.getElementById('filter-star');
+const elStart = document.getElementById('filter-start');
 const elEnd = document.getElementById('filter-end');
 const elDate = document.getElementById('date');
 const elFilList = document.getElementById('filter-list');
+const divItem = document.querySelector('.div-item');
 
-elFilForm.addEventListener("submit", (e) =>{
+
+// Category Filter
+
+let category = [];
+movies.forEach((items) => {
+  category.push(...items.categories);
+});
+
+category = [...new Set(category)]
+
+for (let i = 0; i < category.length; i++) {
+  let op = document.createElement('option');
+  op.setAttribute('value', category[i])
+  op.textContent = category[i]
+  elDate.appendChild(op);
+}
+
+let filmNew = []
+
+elFilForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let textValue = elText.value.toLowerCase();
-  // let optionValue = elOption.value.toLowerCase();
-  // let starValue = elStar.value.toLowerCase();
-  // let endValue = elEnd.value.toLowerCase();
-  movies.forEach(item =>{
-    // elFilList.innerHTML = "";
-    let text = item.title.toLowerCase();
-    if(item.title.indexOf(textValue) != -1){
+  elFilList.innerHTML = "";
+  filmNew = []
+
+  for(let j = 0; j < movies.length; j++) {
+    let title = movies[j].title.toLowerCase().includes(elText.value.toLowerCase())
+    let year = movies[j].year;
+    let cate = true
+    if (elDate.value == 'all') {
+      cate = true
+    } else {
+      cate = movies[j].categories.includes(elDate.value);
+    }
+
+    if (title && cate && year >= elStart.value && year <= elEnd.value) {
+      filmNew.push(movies[j])
+    }
+  }
+
+  // Displayga chiarish joyi
+  if(filmNew.length == 0) {
+    divItem.innerHTML = "";
+    let li = document.createElement('li');
+    let h3 = document.createElement('h3');
+    li.className = 'movie__main col-3';
+    h3.className = 'movie__desc';
+    h3.textContent = 'Sorry this movie is unavailable 🙁';
+    divItem.appendChild(h3);
+    elFilList.appendChild(li);
+    elText.value = "";
+    elStart.value = "";
+    elEnd.value = "";
+  }
+  else {
+  filmNew.forEach(item =>{
       let li = document.createElement("li");
       li.className = 'movie__main col-3';
       li.innerHTML = `
@@ -482,7 +526,7 @@ elFilForm.addEventListener("submit", (e) =>{
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal${idxs}">
           More
         </button>
-  
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal${idx}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -497,7 +541,7 @@ elFilForm.addEventListener("submit", (e) =>{
                 </div>
                 <div class="col-6 p-3">${item.summary}</div>
               </div>
-  
+
             </div>
           </div>
         </div>
@@ -518,51 +562,11 @@ elFilForm.addEventListener("submit", (e) =>{
       </div>
     </div>
   `;
-      elFilList.appendChild(li);
-      // item.categories.forEach(item =>{
-
-      // })
-    }
+    elFilList.appendChild(li);
+    elText.value = "";
+    elStart.value = "";
+    elEnd.value = "";
+    divItem.innerHTML = "";
   });
+}
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const car = document.querySelector(".carousel-fade");
-// const elHeight = document.querySelector("#header");
-// const elBack = document.querySelector(".header-intro");
-// elSearch.addEventListener("keyup", filterItems);
-
-// function filterItems(e) {
-//   let text = e.target.value.toLowerCase();
-//   let items = elList.getElementsByTagName('li');
-//   console.log(items);
-
-//   for (let i = 0; i < Array.from(items).length; i++) {
-//     let itemName = items[i].textContent;
-//     console.log(itemName);
-//     if (itemName.toLowerCase().indexOf(text) != -1) {
-//       items[i].className = "movie__main col-3"
-//       car.style.display = "none";
-//       elHeight.style.height = "0"
-      
-//     } else {
-//       items[i].className = "d-none";
-//     }
-//   }
-// }
